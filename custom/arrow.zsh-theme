@@ -1,15 +1,10 @@
 if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="yellow"; fi
 
-if [ ! -z `rvm-prompt g` > /dev/null ]; then rvm_prompt=' `rvm-prompt`' && echo true; else 
-rvm_prompt=''; fi
+PROMPT='%{$fg[$NCOLOR]%}%c$(git_prompt_info) ➤ %{$reset_color%}'
+RPROMPT='%{$fg[$NCOLOR]%}%p $(rvm_prompt_info)%{$reset_color%}'
 
-
-PROMPT='%{$fg[$NCOLOR]%}%c ➤ %{$reset_color%}'
-RPROMPT='%{$fg[$NCOLOR]%}%p $(git_prompt_info) $(rvm_prompt_info)%{$reset_color%}'
-
-
-ZSH_THEME_GIT_PROMPT_PREFIX="git:"
-ZSH_THEME_GIT_PROMPT_SUFFIX=""
+ZSH_THEME_GIT_PROMPT_PREFIX="["
+ZSH_THEME_GIT_PROMPT_SUFFIX="]"
 ZSH_THEME_GIT_PROMPT_DIRTY="⚡"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
