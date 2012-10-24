@@ -1,1 +1,1 @@
-alias more="/usr/share/vim/vim73/macros/less.sh"
+alias code="/usr/share/vim/vim73/macros/less.sh"
