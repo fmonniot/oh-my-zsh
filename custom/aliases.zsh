@@ -6,3 +6,4 @@ alias gitg="gitg 2>/dev/null &"
 alias start-vpn-minet="sudo systemctl start openvpn@minet.service"
 alias stop-vpn-minet="sudo systemctl stop openvpn@minet.service"
 
+alias l="ls -lah"
